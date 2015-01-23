@@ -73,9 +73,7 @@ $(function() {
   }
 
   function merge($left, $right) {
-    var result  = [],
-            il  = 0,
-            ir  = 0;
+    var result  = $(), il  = 0, ir  = 0;
     while (il < $left.length && ir <$right.length) {
       if ($left[il].value < $right[ir].value){
         result.push($left[il++]);
@@ -83,7 +81,7 @@ $(function() {
         result.push($right[ir++]);
       }
     }
-    return result.concat($left.slice(il)).concat($right.slice(ir));
+    return $.merge($.merge(result, $left.slice(il)), $right.slice(ir));
   }
 
    function mergeSort(foodItems) {
