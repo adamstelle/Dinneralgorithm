@@ -15,18 +15,30 @@
       <header class="grid-100">
         <h1>It's Dinner Time.</h1>
       </header>
-      <section class="grid-40 mobile-grid-100">
-        <h1>Unsorted Pantry</h1>
-        <button id="shuffle">Shuffle the pantry</button>
-        <ul id="unsortedPantry">
-        </ul>
-      </section>
-      <section class="grid-40 mobile-grid-100">
-        <h1>Sorted Pantry</h1>
-        <button id="sort">Sort the pantry</button>
-        <ul id="sortedPantry">
-        </ul>
-      </section>
+      <div class="grid-100">
+        <section class="grid-100 mobile-grid-100">
+          <h1>Unsorted Pantry</h1>
+          <button id="shuffle">Shuffle the pantry</button>
+          <ul id="unsortedPantry">
+          </ul>
+        </section>
+         <section class="grid-50 mobile-grid-100">
+          <h1>Left Array</h1>
+          <div id="leftPantry">
+          </div>
+        </section>
+        <section class="grid-50 mobile-grid-100">
+          <h1>Right Array</h1>
+          <div id="rightPantry">
+          </div>
+        </section>
+        <section class="grid-100 mobile-grid-100">
+          <h1>Sorted Pantry</h1>
+          <button id="sort">Sort the pantry</button>
+          <div id="sortedPantry">
+          </div>
+        </section>
+      </div>
     </main>
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="script.js"></script>

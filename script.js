@@ -67,37 +67,35 @@ $(function() {
         }
       };
 
-  function sortingFunction(foodItems) {
-    var something = mergeSort(foodItems);
-    $("#sortedPantry").append(something);
-  }
-
   function merge($left, $right) {
-    var result  = $(), il  = 0, ir  = 0;
+    var il  = 0, ir  = 0;
     while (il < $left.length && ir <$right.length) {
       if ($left[il].value < $right[ir].value){
-        result.push($left[il++]);
+        $("#sortedPantry").append($left[il++]);
       } else {
-        result.push($right[ir++]);
+        $("#sortedPantry").append($right[ir++]);
       }
     }
-    return $.merge($.merge(result, $left.slice(il)), $right.slice(ir));
+    // $("#sortedPantry").append($.merge($.merge($result, $left.slice(il)), $right.slice(ir)));
+    return $.merge($.merge($("#sortedPantry"), $left.slice(il)), $right.slice(ir));
   }
 
-   function mergeSort(foodItems) {
-    if (foodItems.length < 2) {
-      return foodItems;
+   function mergeSort(pantry, i) {
+    this.pantry = pantry;
+    if (pantry.length < 2) {
+      return pantry;
     }
-    $temp = $(".foodItem:eq(" + foodItems + ")");
-    var middle = Math.floor(foodItems.length / 2),
-        $left   = foodItems.slice(0, middle),
-        $right  = foodItems.slice(middle, foodItems.length);
-    return merge(mergeSort($left), mergeSort($right));
+    var middle  = Math.floor(pantry.length / 2);
+    $("#leftPantry").append("<ul class="+i+">Left Array "+i+"<br></ul>");
+    $("#rightPantry").append("<ul class="+i+">Right Array "+i+"<br></ul>");
+    $("#leftPantry ." +i+ "").append(pantry.slice(0, middle));
+    $("#rightPantry ." +i+ "").append(pantry.slice(middle, pantry.length));
+    i++;
+    return merge(mergeSort($("#leftPantry ." + (i-1) + " .foodItem "), i), mergeSort($("#rightPantry ." + (i-1) + " .foodItem ")));
   }
 
   pantry = new Pantry();
   $("#shuffle").on("click", function() { shuffle($("#unsortedPantry .foodItem").length) });
-  $("#sort").on("click", function() {sortingFunction($("#unsortedPantry .foodItem")) });
+  $("#sort").on("click", function() {mergeSort($("#unsortedPantry .foodItem"), 0) });
 
 });
-
