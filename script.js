@@ -83,7 +83,6 @@ $(function() {
         result.push($right[ir++]);
       }
     }
-    console.log(result);
     return result.concat($left.slice(il)).concat($right.slice(ir));
   }
 
@@ -99,7 +98,6 @@ $(function() {
   }
 
   pantry = new Pantry();
-  console.log($("#unsortedPantry .foodItem"));
   $("#shuffle").on("click", function() { shuffle($("#unsortedPantry .foodItem").length) });
   $("#sort").on("click", function() {sortingFunction($("#unsortedPantry .foodItem")) });
 
