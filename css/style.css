@@ -4,7 +4,7 @@ header{
 
 ul#pantry {}
 
-li.foodItem {
+li {
   float: left;
   display: block;
   width: 2.5em;
@@ -15,4 +15,12 @@ li.foodItem {
 li img {
   width:2em;
   height: auto;
+}
+
+div.leftcontainer {
+  background-color: yellow;
+}
+
+div.rightcontainer {
+  background-color: orange;
 }

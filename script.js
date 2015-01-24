@@ -68,7 +68,8 @@ $(function() {
       };
 
   function sortingFunction(foodItems) {
-    var something = mergeSort(foodItems);
+    var i = 0;
+    var something = mergeSort(foodItems, i);
     $("#sortedPantry").append(something);
   }
 
@@ -84,15 +85,18 @@ $(function() {
     return $.merge($.merge(result, $left.slice(il)), $right.slice(ir));
   }
 
-   function mergeSort(foodItems) {
+   function mergeSort(foodItems, i) {
     if (foodItems.length < 2) {
       return foodItems;
     }
-    $temp = $(".foodItem:eq(" + foodItems + ")");
+    i++;
     var middle = Math.floor(foodItems.length / 2),
-        $left   = foodItems.slice(0, middle),
-        $right  = foodItems.slice(middle, foodItems.length);
-    return merge(mergeSort($left), mergeSort($right));
+        $left  = foodItems.slice(0, middle),
+        $right = foodItems.slice(middle, foodItems.length);
+        $("#functionlog").append("<div id="+i+"left class='grid-50 leftcontainer'></div><div id="+i+"right class='grid-50 rightcontainer'</div>");
+        $("#"+i+"left").append($left);
+        $("#"+i+"right").append($right);
+    return merge(mergeSort($left, i), mergeSort($right, i));
   }
 
   pantry = new Pantry();
