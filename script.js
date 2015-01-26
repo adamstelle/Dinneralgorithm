@@ -95,6 +95,8 @@ $(function() {
     $result.append($ul.children());
     $result.append($newUL.children()); 
     $result.insertBefore($ul);
+    $result.clone().appendTo($(".work"));
+    $(".work").append($("<p><strong>Next step:</strong></p>"));
     $ul.remove();
     $newUL.remove();
     return $result;
