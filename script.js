@@ -6,47 +6,47 @@ $(function() {
   }
 
   FoodItem.prototype.toPantry = function() {
-    return "<li class='foodItem' value=" + this.calories + ">" + this.foodname + "<br>" + this.calories + "<img src= icons/"+this.foodname+".png /></li>";
+    return "<li class='foodItem' value=" + this.calories + "><strong>" + this.foodname + "</strong><br><em>" + this.calories + "</em><img src= icons/"+this.foodname+".png /></li>";
   }
 
   function Pantry() {
     thisPantry = this;
     this.foods = [   
-      {"foodname" : "apple",     "calories" : 30,  "group" : "dessert"},
-      {"foodname" : "bagel",     "calories" : 150, "group" : "starch"},
-      {"foodname" : "banana",    "calories" : 40,  "group" : "dessert"},
-      {"foodname" : "bread",     "calories" : 80,  "group" : "starch"},
-      {"foodname" : "broccoli",  "calories" : 50,  "group" : "vegetable"},
-      {"foodname" : "burger",    "calories" : 375, "group" : "protien"},
-      {"foodname" : "cake"  ,    "calories" : 350, "group" : "dessert"},
-      {"foodname" : "carrot",    "calories" : 25,  "group" : "vegetable"},
-      {"foodname" : "cheese",    "calories" : 150, "group" : "starch"},
-      {"foodname" : "chicken",   "calories" : 200, "group" : "protien"},
-      {"foodname" : "chocolate", "calories" : 260, "group" : "dessert"},
-      {"foodname" : "corn",      "calories" : 60,  "group" : "vegetable"},
-      {"foodname" : "eggplant",  "calories" : 45,  "group" : "vegetable"},
-      {"foodname" : "eggs",      "calories" : 150, "group" : "protien"},
-      {"foodname" : "fish",      "calories" : 200, "group" : "protien"},
-      {"foodname" : "fries",     "calories" : 275, "group" : "starch"},
-      {"foodname" : "hotdog",    "calories" : 250, "group" : "protien"},
-      {"foodname" : "icecream",  "calories" : 350, "group" : "dessert"},
-      {"foodname" : "kale",      "calories" : 50,  "group" : "vegetable"},
-      {"foodname" : "mushroom",  "calories" : 60,  "group" : "vegetable"}, 
-      {"foodname" : "pear",      "calories" : 60,  "group" : "dessert"},
-      {"foodname" : "pepper",    "calories" : 50,  "group" : "vegetable"},
-      {"foodname" : "pizza",     "calories" : 350, "group" : "protien"},
-      {"foodname" : "pumpkin",   "calories" : 80,  "group" : "vegetable"},
-      {"foodname" : "ramen",     "calories" : 150, "group" : "starch"},
-      {"foodname" : "rice",      "calories" : 100, "group" : "starch", },
-      {"foodname" : "sausage",   "calories" : 220, "group" : "protien"},
-      {"foodname" : "steak",     "calories" : 250, "group" : "protien"},
-      {"foodname" : "strawberry","calories" : 80,  "group" : "dessert"},
-      {"foodname" : "taco",      "calories" : 160, "group" : "protien"},
-      {"foodname" : "tomato",    "calories" : 70,  "group" : "vegetable"},
-      {"foodname" : "turkey",    "calories" : 160, "group" : "protien"},
-      {"foodname" : "turnip",    "calories" : 40,  "group" : "vegetable"},       
-      {"foodname" : "watermelon","calories" : 40,  "group" : "dessert"},
-      {"foodname" : "wheat",     "calories" : 90,  "group" : "starch"}
+      {"foodname" : "Apple",     "calories" : 30,  "group" : "dessert"},
+      {"foodname" : "Bagel",     "calories" : 150, "group" : "starch"},
+      {"foodname" : "Banana",    "calories" : 40,  "group" : "dessert"},
+      {"foodname" : "Bread",     "calories" : 80,  "group" : "starch"},
+      {"foodname" : "Broccoli",  "calories" : 50,  "group" : "vegetable"},
+      {"foodname" : "Burger",    "calories" : 375, "group" : "protien"},
+      {"foodname" : "Cake"  ,    "calories" : 350, "group" : "dessert"},
+      {"foodname" : "Carrot",    "calories" : 25,  "group" : "vegetable"},
+      {"foodname" : "Cheese",    "calories" : 150, "group" : "starch"},
+      {"foodname" : "Chicken",   "calories" : 200, "group" : "protien"},
+      {"foodname" : "Chocolate", "calories" : 260, "group" : "dessert"},
+      {"foodname" : "Corn",      "calories" : 60,  "group" : "vegetable"},
+      {"foodname" : "Eggplant",  "calories" : 45,  "group" : "vegetable"},
+      {"foodname" : "Eggs",      "calories" : 150, "group" : "protien"},
+      {"foodname" : "Fish",      "calories" : 200, "group" : "protien"},
+      {"foodname" : "Fries",     "calories" : 275, "group" : "starch"},
+      {"foodname" : "Hotdog",    "calories" : 250, "group" : "protien"},
+      {"foodname" : "Icecream",  "calories" : 350, "group" : "dessert"},
+      {"foodname" : "Kale",      "calories" : 50,  "group" : "vegetable"},
+      {"foodname" : "Mushroom",  "calories" : 60,  "group" : "vegetable"}, 
+      {"foodname" : "Pear",      "calories" : 60,  "group" : "dessert"},
+      {"foodname" : "Pepper",    "calories" : 50,  "group" : "vegetable"},
+      {"foodname" : "Pizza",     "calories" : 350, "group" : "protien"},
+      {"foodname" : "Pumpkin",   "calories" : 80,  "group" : "vegetable"},
+      {"foodname" : "Ramen",     "calories" : 150, "group" : "starch"},
+      {"foodname" : "Rice",      "calories" : 100, "group" : "starch", },
+      {"foodname" : "Sausage",   "calories" : 220, "group" : "protien"},
+      {"foodname" : "Steak",     "calories" : 250, "group" : "protien"},
+      {"foodname" : "Strawberry","calories" : 80,  "group" : "dessert"},
+      {"foodname" : "Taco",      "calories" : 160, "group" : "protien"},
+      {"foodname" : "Tomato",    "calories" : 70,  "group" : "vegetable"},
+      {"foodname" : "Turkey",    "calories" : 160, "group" : "protien"},
+      {"foodname" : "Turnip",    "calories" : 40,  "group" : "vegetable"},       
+      {"foodname" : "Watermelon","calories" : 40,  "group" : "dessert"},
+      {"foodname" : "Wheat",     "calories" : 90,  "group" : "starch"}
     ];
 
     $.each(thisPantry.foods, function() {
@@ -66,42 +66,45 @@ $(function() {
           setTimeout(shuffle, 200, foodItems);
         }
       };
-
-  function sortingFunction(foodItems) {
-    var i = 0;
-    var something = mergeSort(foodItems, i);
-    $("#sortedPantry").append(something);
+  
+  function splitUL($ul) {
+    var middle = Math.floor($ul.children().length / 2);
+    $("<ul></ul>").insertAfter($ul);
+    $ul.children().eq(middle-1).nextAll().appendTo($ul.next());
+    return $ul.next();
   }
 
-  function merge($left, $right) {
-    var result  = $(), il  = 0, ir  = 0;
-    while (il < $left.length && ir <$right.length) {
-      if ($left[il].value < $right[ir].value){
-        result.push($left[il++]);
-      } else {
-        result.push($right[ir++]);
+  function mergeSort($ul) {
+    if ($ul.children().length < 2) {
+      return $ul;
+    }
+    var $newUL = splitUL($ul);
+    return merge(mergeSort($ul), mergeSort($newUL));
+  }
+
+  function merge($ul, $newUL) {
+    var $result = $("<ul></ul>");
+    while ($ul.children().length && $newUL.children().length) {
+      if ($ul.children().first().val() < $newUL.children().first().val()) {
+        $result.append($ul.children().first());
+      } 
+      else {
+        $result.append($newUL.children().first());
       }
     }
-    return $.merge($.merge(result, $left.slice(il)), $right.slice(ir));
+    $result.append($ul.children());
+    $result.append($newUL.children()); 
+    $result.insertBefore($ul);
+    $ul.remove();
+    $newUL.remove();
+    return $result;
   }
 
-   function mergeSort(foodItems, i) {
-    if (foodItems.length < 2) {
-      return foodItems;
-    }
-    i++;
-    var middle = Math.floor(foodItems.length / 2),
-        $left  = foodItems.slice(0, middle),
-        $right = foodItems.slice(middle, foodItems.length);
-        $("#functionlog").append("<div id="+i+"left class='grid-50 leftcontainer'></div><div id="+i+"right class='grid-50 rightcontainer'</div>");
-        $("#"+i+"left").append($left);
-        $("#"+i+"right").append($right);
-    return merge(mergeSort($left, i), mergeSort($right, i));
-  }
+// Do I still need to .merge the uls into results?
 
   pantry = new Pantry();
   $("#shuffle").on("click", function() { shuffle($("#unsortedPantry .foodItem").length) });
-  $("#sort").on("click", function() {sortingFunction($("#unsortedPantry .foodItem")) });
+  $("#sort").on("click", function() {mergeSort($("#unsortedPantry"), 0) });
 
 });
 
