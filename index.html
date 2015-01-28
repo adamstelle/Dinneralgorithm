@@ -7,27 +7,32 @@
       <link rel="stylesheet" href="css/reset.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
+      <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,400,700,100italic,400italic,700italic' rel='stylesheet' type='text/css'>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <main class="grid-100">
-      <header class="grid-100">
+      <header class="grid-100 main">
         <h1>It's Dinner Time.</h1>
       </header>
-      <section class="grid-40 mobile-grid-100">
-        <h1>Unsorted Pantry</h1>
-        <button id="shuffle">Shuffle the pantry</button>
-        <ul id="unsortedPantry">
-        </ul>
+      <section class="grid-100 main">
+        <p>This website is designed to help you understand how <em><strong>merge sorts</em></strong> work. Merge sorts are one of the most efficient sorting algorithms out there, and although they can come off as complex at first glance, are actually quite intuitive. Below we use a simulation of food items in a pantry to illustrate how merge sorting works.  </p>
       </section>
-      <section class="grid-40 mobile-grid-100">
-        <h1>Sorted Pantry</h1>
+      <section class="grid-100 main">
+        <h2>This is your pantry!  </h2>
+        <button id="shuffle">Shuffle the pantry</button>
         <button id="sort">Sort the pantry</button>
-        <ul id="sortedPantry">
-        </ul>
+        <ul id="unsortedPantry">
+        </ul> 
+      </section>
+      <section class="grid-100 main work">
+        <h2>These are the inner workings of your merge sort!</h2>
       </section>
     </main>
+    <footer class="main grid-40 prefix-30 postfix-30">
+      <p>Designed & Built for your viewing pleasure by Adam Stelle
+    </footer>
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="script.js"></script>
   </body>

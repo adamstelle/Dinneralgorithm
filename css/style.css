@@ -1,18 +1,57 @@
-header{
-  margin: 1em 0 1em 0;
+/* LAYOUT */
+
+body {
+  font-family: 'Josefin Slab', serif;
 }
 
-ul#pantry {}
+h1 {
+  font-size: 3em;
+}
 
-li.foodItem {
-  float: left;
-  display: block;
+h2 {
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+ul {
+  border: black solid 2px;
+  display: inline-block;
+  padding: .3em;
+  text-align: center;
+}
+
+.main {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+footer {
+  position: absolute;
+  bottom:0;
+  text-align: center;
+  font-size: .7em;
+}
+
+
+/* MODULES */
+
+button {
+  font-family: 'Josefin Slab';
+  font-size: 1em;
+  padding: .5em;
+  margin: .5em 0 .5em 0;
+}
+
+li {
+  display: inline-block;
   width: 2.5em;
-  padding: .1em 2.2em 0 0;
+  padding: .3em 3em 0 0;
   size: 5em;
 }
 
 li img {
-  width:2em;
+  width: 3em;
   height: auto;
 }
+
+
